@@ -40,7 +40,6 @@ tprDT = cm[1,1]/(cm[1,0] + cm[1,1])
 fprDT = cm[0,1]/(cm[0,0] + cm[0,1])
 listTPR.append(tprDT*100)
 listFPR.append(fprDT*100)
-# https://bernatas.medium.com/roc-e%C4%9Frisi-ve-e%C4%9Fri-alt%C4%B1nda-kalan-alan-auc-97b058e8e0cf
 probs = dtc.predict_proba(x_test)
 preds = probs[:,1]
 fpr, tpr, threshold = metrics.roc_curve(y_test, y_pred)
